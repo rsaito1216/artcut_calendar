@@ -1,0 +1,52 @@
+<%= form_with(model: event, local: true) do |form| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> 入力情報に誤り、もしくは未記入欄があります！</h2>
+
+      <ul>
+        <% event.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">予約内容入力</h2>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        名前
+        <span class="indispensable">必須</span> ニックネームを記載してください。記載していただくと、急病などで営業出来ない場合は連絡先が分かれば店主から連絡が出来ます。
+      </div>
+      <%= form.text_area :title, class:"items-text", id:"item-name", placeholder:"名字(カタカナ)、またはニックネーム(１０文字まで)", maxlength:"10" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          説明
+          <span class="indispensable">空欄OK</span> 「髭剃りのみ希望(←この場合３０分)」、「白髪染めを希望(←この場合９０分)」、など通常のカットコース以外を希望する場合は記載してください。
+        </div>
+        <%= form.text_area :description, class:"items-text", id:"item-info", placeholder:"(30文字まで)" ,rows:"2" ,maxlength:"30" %>
+      </div>
+    </div>
+   
+    <div class="items-detail">
+      <div class="weight-bold-text">予約日時</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          開始日時
+          <span class="indispensable">必須</span> 開店時間ＡＭ９：００
+        </div>
+        <%= form.datetime_select :start_date, {datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>', start_hour: 9, end_hour: 18, ampm: true, minute_step: 15}, class:"select-box" %>
+        <div class="weight-bold-text">
+          終了日時
+          <span class="indispensable">必須</span> 閉店時間ＰＭ７：００
+          <p>注：年月日を上と同じにしてください。<br>通常のカットコース予約なら開始時間から６０分後(１時間後)に設定してください)</p>
+        </div>
+        <%= form.datetime_select :end_date , {datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>', start_hour: 9, end_hour: 19, ampm: true,minute_step: 15}, class:"select-box" %>
+      </div>
+    </div>
+    
+    <div class="sell-btn-contents">
+      <%= form.submit "決定する" ,class:"sell-btn" %>
+    </div>
+ 
+<% end %>

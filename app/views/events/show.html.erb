@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>名前:</strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong>説明:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>開始時間:</strong>
+  <%= @event.start_date %>
+</p>
+
+<p>
+  <strong>終了時間:</strong>
+  <%= @event.end_date %>
+</p>
+
+<% if user_signed_in? && current_user.id == @event.user_id %>
+  <%= link_to '予約変更', edit_event_path(@event) %> |
+  <%= link_to '予約取り消し', event_path(@event), method: :delete, data: { confirm: '予約を取り消すと元に戻せません。本当に取り消しますか？' } %> |
+<% elsif  user_signed_in? && current_user.admin %>
+  <%= link_to '予約変更', edit_event_path(@event) %> |
+  <%= link_to '予約取り消し', event_path(@event), method: :delete, data: { confirm: '予約を取り消すと元に戻せません。本当に取り消しますか？' } %> |
+<% end %>
+<%= link_to 'トップページでカレンダーを確認する', events_path %>
