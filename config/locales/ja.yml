@@ -5,3 +5,8 @@ ja:
        nickname: ニックネーム
      event:
        title: 名前
+
+ time:
+   formats:
+     default: "%Y/%m/%d %H:%M:%S"
+     short: "%Y/%m/%d %H:%M"
