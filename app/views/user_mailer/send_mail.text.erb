@@ -10,9 +10,9 @@
 
 説明:<%= @event.description %>
 
-開始時間:<%= @event.start_date %>
+開始時間:<%=l @event.start_date, format: :short %>
 
-終了時間:<%= @event.end_date %>
+終了時間:<%=l @event.end_date, format: :short %>
 
 予約当日はお待ちしております。
 
