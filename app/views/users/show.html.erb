@@ -2,35 +2,35 @@
   <h1 class="notice-title"><%= @nickname %>さんの予約一覧</h1>
   
   <table>
-  <thead>
-    <tr>
-      <th>名前</th>
-      <th>説明</th>
-      <th>開始時間</th>
-      <th>終了時間</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
+    <thead>
+      <tr>
+        <th>名前</th>
+        <th>説明</th>
+        <th>開始時間</th>
+        <th>終了時間</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% if @events.present? %>
-      <% @events.each do |event| %>
-        <tr>
-          <td><%= event.title %></td>
-          <td><%= event.description %></td>
-          <td><%=l event.start_date , format: :short%></td>
-          <td><%=l event.end_date , format: :short%></td>
-          <% if user_signed_in? && current_user.id == event.user_id %>
-            <td><%= link_to '予約変更', edit_event_path(event) %></td>
-            <td><%= link_to '予約取り消し', event_path(event), method: :delete, data: { confirm: '予約を取り消すと元に戻せません。本当に取り消しますか？' } %></td>
-          <% end %>
-        </tr>
+    <tbody>
+      <% if @events.present? %>
+        <% @events.each do |event| %>
+          <tr>
+            <td><%= event.title %></td>
+            <td><%= event.description %></td>
+            <td><%=l event.start_date , format: :short%></td>
+            <td><%=l event.end_date , format: :short%></td>
+            <% if user_signed_in? && current_user.id == event.user_id %>
+              <td><%= link_to '予約変更', edit_event_path(event) %></td>
+              <td><%= link_to '予約取り消し', event_path(event), method: :delete, data: { confirm: '予約を取り消すと元に戻せません。本当に取り消しますか？' } %></td>
+            <% end %>
+          </tr>
+        <% end %>
+        <% else if %>
+          <h1>登録している予約はありません</h1>
+        <% end %>
       <% end %>
-      <% else if %>
-      <h1>登録している予約はありません</h1>
-      <% end %>
-    <% end %>
-  </tbody>
-</table>
-<%= link_to 'トップページに戻る', events_path ,class:"notice-title"%>
+    </tbody>
+  </table>
+  <%= link_to 'トップページに戻る', events_path ,class:"notice-title"%>
 </div>

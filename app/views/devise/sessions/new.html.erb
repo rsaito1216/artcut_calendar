@@ -16,8 +16,6 @@
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
 
-      
-
       <% if devise_mapping.rememberable? %>
         <div class="field">
           <%= f.label :remember_me %><br />
@@ -32,7 +30,6 @@
       <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
         <%= link_to "パスワードを忘れた場合はここをクリック", new_password_path(resource_name) %><br />
       <% end %>
-
     <% end %>
   </div>
 </div>

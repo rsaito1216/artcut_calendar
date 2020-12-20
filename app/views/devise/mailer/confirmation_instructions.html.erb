@@ -4,6 +4,7 @@
 <% else %>
   <p>下記のリンクをクリックしてユーザ登録を完了してください。</p>
 <% end %>
+
 <p><%= link_to 'ここを押してメールアドレスを認証する', controller: 'devise/confirmations',action: 'create',confirmation_token: @token %></p>
 
 <p>※このメールに心当たりが無い方はこのまま何もせず削除してください</p>

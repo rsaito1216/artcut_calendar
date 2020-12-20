@@ -8,11 +8,13 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require('./time.js')
 
 import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import timeGridPlugin from '@fullcalendar/timegrid';
+import { inputChangeSelector } from '@rails/ujs'
     
 document.addEventListener("turbolinks:load", function() {
   var calendarEl = document.getElementById('calendar');
@@ -32,7 +34,6 @@ document.addEventListener("turbolinks:load", function() {
       startTime: '9:00',
       endTime: '19:00',
     }
-    
   });
   
   calendar.render();

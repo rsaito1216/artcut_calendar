@@ -1058,25 +1058,18 @@ footer p {
   width: 10%;
 }
 
-.items-sell-title {
+.sell-title {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
   color: goldenrod;
 }
 
-.items-sell-main {
+.event-sell-main {
   background-color: #FFF;
   width: 100vw;
   min-width: 450px;
   padding: 10vh 15vw;
-}
-
-.items-sell-title {
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  margin: 5px 0;
 }
 
 .notice-title {
@@ -1090,12 +1083,8 @@ footer p {
 
 .weight-bold-text {
   font-weight: bold;
-  min-width: 320px;
-  margin: 10px 0;
-}
-
-.new-items {
-  padding: 2vh 0;
+  min-width: 330px;
+  margin: 20px 0 10px 0;
 }
 
 .indispensable {
@@ -1108,12 +1097,12 @@ footer p {
   font-weight: bold;
 }
 
-.items-detail {
+.event-detail {
   display: flex;
   padding: 2vh 0;
 }
 
-.items-detail>.form {
+.event-detail>.form {
   align-self: flex-end;
   width: 150px;
   padding: 10px 0;
@@ -1134,7 +1123,7 @@ footer p {
   border-bottom: solid 5px #61718a;
 }
 
-.reason-list-description {
+.list-description {
   font-size: 16px;
   margin: 12px 0px;
 }
