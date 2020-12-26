@@ -10,6 +10,8 @@
       const endMonthForm = document.getElementById('event_end_date_2i');
       const startDayForm = document.getElementById('event_start_date_3i');
       const endDayForm = document.getElementById('event_end_date_3i');
+      const startHourForm = document.getElementById('event_start_date_4i');
+      const endHourForm = document.getElementById('event_end_date_4i');
       let yearValue = startYearForm.value;
       endDayForm.value = yearValue
       let monthValue = startMonthForm.value;
@@ -27,6 +29,10 @@
       startDayForm.addEventListener('change', (event) => {
         const dayValue = startDayForm.value;
         endDayForm.value = dayValue
+      })
+      startHourForm.addEventListener('change', (event) => {
+        const hourValue = startHourForm.value;
+        endHourForm.value = hourValue
       })
     })
   //  }

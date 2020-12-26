@@ -11,7 +11,7 @@ class Event < ApplicationRecord
   end
 
   def start_check
-    errors.add(:start_date, "は現在の日時より遅い時間を選択してください") if self.start_date < Time.now
+    errors.add(:start_date, "は現在の日時より遅いを選択してください") if self.start_date < Time.now
   end
 
 end
