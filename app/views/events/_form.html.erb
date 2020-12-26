@@ -15,9 +15,9 @@
     <h2 class="sell-title">予約内容入力</h2>
       <div class="weight-bold-text">
         名前
-        <span class="indispensable">必須</span> ニックネームを記載してください。記載していただくと、急病などで営業出来ない場合は連絡先が分かれば店主から連絡が出来ます。
+        <span class="indispensable">必須</span> ニックネームを記載してください。記載していただくと、急病などで営業できない場合は連絡先が分かれば店主から連絡が出来ます。
       </div>
-      <%= form.text_area :title, class:"items-text", id:"item-name", placeholder:"名字(カタカナ)、またはニックネーム(１０文字まで)", maxlength:"10" %>
+      <%= form.text_field :title, class:"items-text", id:"item-name", placeholder:"名字(カタカナ)、またはニックネーム(１０文字まで)", maxlength:"10" %>
       <div class="items-explain">
         <div class="weight-bold-text">
           説明
@@ -27,19 +27,23 @@
       </div>
    
     <div class="event-detail">
-      <div class="weight-bold-text">予約日時</div>
+      <div class="weight-bold-text-title">予約日時</div>
         <div class="form">
-          <div class="weight-bold-text">
+          <div class="weight-bold-text-list">
             開始日時
             <span class="indispensable">必須</span> 開店時間ＡＭ９：００
           </div>
-          <%= form.datetime_select :start_date, {datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>', start_hour: 9, end_hour: 18, ampm: true, minute_step: 15}, class:"select-box" %>
-          <div class="weight-bold-text">
+          <div class="start-time">
+            <%= form.datetime_select :start_date, {datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>', start_hour: 9, end_hour: 18, ampm: true, minute_step: 15}, class:"select-box" %>
+          </div>
+          <div class="weight-bold-text-list">
             終了時間
             <span class="indispensable">必須</span> 閉店時間ＰＭ７：００
             <p>通常のカットコース予約なら開始時間から６０分後(１時間後)に設定してください)</p>
           </div>
-          <%= form.datetime_select :end_date , {:discard_year => true,:discard_month => true,:discard_day => true, datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>', start_hour: 9, end_hour: 19, ampm: true,minute_step: 15}, class:"select-box" %>
+          <div class="end-time">
+            <%= form.datetime_select :end_date , {:discard_year => true,:discard_month => true,:discard_day => true,datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>', start_hour: 9, end_hour: 19, ampm: true,minute_step: 15}, class:"select-box" %>
+          </div>
         </div>
       </div>
       <div class="sell-btn-contents">

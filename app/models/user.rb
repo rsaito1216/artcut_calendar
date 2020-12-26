@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :events, dependent: :destroy
 
   validates :nickname, presence: true
+  validates :email, format: { with: /[@]/, message: "に@が入力されていません"}
 end

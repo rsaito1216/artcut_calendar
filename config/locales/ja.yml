@@ -5,6 +5,8 @@ ja:
        nickname: ニックネーム
      event:
        title: 名前
+       start_date: 開始日時
+       end_date: 終了時間
 
  time:
    formats:

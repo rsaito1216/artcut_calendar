@@ -1087,6 +1087,21 @@ footer p {
   margin: 20px 0 10px 0;
 }
 
+.weight-bold-text-title{
+  font-weight: bold;
+  width: 100px;
+  margin: 10px 0 0 0;
+  padding: 5px 0 0 10px;
+  border: 2px solid #57C3E9;
+}
+
+.weight-bold-text-list {
+  font-weight: bold;
+  width: 100%;
+  margin: 35px 0 35px 0;
+  
+}
+
 .indispensable {
   background: #ea352d;
   margin-left: 8px;
@@ -1098,19 +1113,37 @@ footer p {
 }
 
 .event-detail {
-  display: flex;
+  display: flexbox;
   padding: 2vh 0;
 }
 
 .event-detail>.form {
   align-self: flex-end;
-  width: 150px;
+  width: 100%;
   padding: 10px 0;
+}
+
+.start-time {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 50px;
+  margin: 10px 0;
+}
+
+.end-time {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 50px;
+  padding-left: 322px;
 }
 
 .select-box {
   padding-left: 10px;
-  margin: 5px 0;
+  margin: 5px 5px;
+  width: 85px;
+  height: 40px;
 }
 
 .description-title {
