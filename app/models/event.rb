@@ -6,6 +6,9 @@ class Event < ApplicationRecord
   validate :start_end_check
   validate :start_check
 
+  validates :start_date, event: true
+  validates :end_date,   event: true
+  
   def start_end_check
     errors.add(:end_date, "は開始時刻より遅い時間を選択してください") if self.start_date >= self.end_date
   end
@@ -13,5 +16,4 @@ class Event < ApplicationRecord
   def start_check
     errors.add(:start_date, "は現在の日時より遅いを選択してください") if self.start_date < Time.now
   end
-
 end
