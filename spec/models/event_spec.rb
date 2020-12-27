@@ -14,19 +14,24 @@ RSpec.describe Event, type: :model do
         @event.description = nil
         expect(@event).to be_valid
       end
+
+      it 'start_dateは現在の日付以降なら保存できること' do
+        @event.start_date = 
+        expect(@event).to be_valid
+      end
     end
 
     context '新規予約登録がうまくいかないとき' do
       it 'titleが空では保存できないこと' do
         @event.title = nil
         @event.valid?
-        expect(@event.errors.full_messages).to include("Content can't be blank")
+        expect(@event.errors.full_messages).to include("名前を入力してください")
       end
 
       it 'userが紐付いていないと保存できないこと' do
         @event.user = nil
         @event.valid?
-        expect(@event.errors.full_messages).to include("User must exist")
+        expect(@event.errors.full_messages).to include("Userを入力してください")
       end
     end
   end
