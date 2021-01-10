@@ -15,8 +15,13 @@ RSpec.describe Event, type: :model do
         expect(@event).to be_valid
       end
 
-      it 'start_dateは現在の日付以降なら保存できること' do
-        @event.start_date = 
+      it 'start_dateは現在の時間以降なら保存できること' do
+        @event.start_date = Time.zone.now+ 60 * 60
+        expect(@event).to be_valid
+      end
+
+      it 'end_dateはstart_date以降なら保存できること' do
+        @event.end_date = @event.start_date+ 60 * 60
         expect(@event).to be_valid
       end
     end
@@ -32,6 +37,24 @@ RSpec.describe Event, type: :model do
         @event.user = nil
         @event.valid?
         expect(@event.errors.full_messages).to include("Userを入力してください")
+      end
+
+      it 'start_dateは現在の時間より前だと保存できない' do
+        @event.start_date = Time.zone.now- 60 * 60
+        @event.valid?
+        expect(@event.errors.full_messages).to include("開始日時は現在の日時より遅い時間を選択してください")
+      end
+
+      it 'end_dateはstart_dateより前だと保存できない' do
+        @event.end_date = @event.start_date- 60 * 60
+        @event.valid?
+        expect(@event.errors.full_messages).to include("終了時間は開始時刻より遅い時刻を選択してください")
+      end
+
+      it 'start_dateは既に保存されている時間と重複していると保存できない' do
+      end
+
+      it 'end_dateは既に保存されている時間と重複していると保存できない' do
       end
     end
   end

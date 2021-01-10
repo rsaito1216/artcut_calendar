@@ -1151,6 +1151,7 @@ footer p {
   font-weight: bold;
   color: goldenrod;
   margin: 20px 0;
+  padding-left: 30px;
   background: #cde4ff;
   border-top: solid 5px #536279;
   border-bottom: solid 5px #61718a;
@@ -1159,4 +1160,5 @@ footer p {
 .list-description {
   font-size: 16px;
   margin: 12px 0px;
+  padding-left: 20px;
 }
