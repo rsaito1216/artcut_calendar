@@ -472,6 +472,7 @@ ul li {
   *zoom: 1;
 }
 
+
 .row .grid-1,
 .row .grid-2,
 .row .grid-3,
@@ -1161,4 +1162,22 @@ footer p {
   font-size: 16px;
   margin: 12px 0px;
   padding-left: 20px;
+}
+
+.admin_header {
+  display: flex;
+  text-align: center;
+  padding: 0 50px 0 55px;
+  justify-content: center;
+}
+
+.admin_post{
+  padding: 8px 20px;
+    font-size: 14px;
+    border: 2px solid #57C3E9;
+    color: #57C3E9;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    display: inline-block;
 }
