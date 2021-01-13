@@ -17,7 +17,7 @@
   /* layout of immediate children */
   display: flex;
   flex-direction: column;
-
+  background-color: whitesmoke;
   font-size: 1em
 }
 .fc,
