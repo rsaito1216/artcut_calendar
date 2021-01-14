@@ -7,6 +7,10 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
+        <%= f.label :nickname %><i>(ニックネームを変更したい場合は直してください。８文字まで)</i><br/>
+        <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", maxlength: "8" %>
+      </div>
+      <div class="field">
         <%= f.label :email %><i>(メールアドレスを変更したい場合は直してください)</i><br/>
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
@@ -16,12 +20,13 @@
       <% end %>
 
       <div class="field">
-        <%= f.label :password %> <i>(変更したいパスワードを入力、<br>アドレスの変更の場合は空欄)</i><br/>
+        <%= f.label :password %> <i>(変更したいパスワードを入力<% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> 文字以上)</em>
+        <% end %>、<br>アドレスの変更の場合は空欄)</i><br/>
+        
         <%= f.password_field :password, autocomplete: "new-password" %>
-        <% if @minimum_password_length %>
-          <br />
-          <em><%= @minimum_password_length %> 文字以上</em>
-        <% end %>
+        
+        
       </div>
 
       <div class="field">

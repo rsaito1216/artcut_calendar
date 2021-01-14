@@ -13,7 +13,8 @@
   <body>
     <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href= / >○○理容室予約カレンダー</a></h1>
+        <%# <a href= / ><img style="width:330px; height:52px;" src="assets/スクリーンショット 2021-01-14 12.45.00"></a> %>
+        <%= link_to image_tag("スクリーンショット 2021-01-14 17.44.55",:size =>'260'), root_path %>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
             <span><%= current_user.nickname %>さん

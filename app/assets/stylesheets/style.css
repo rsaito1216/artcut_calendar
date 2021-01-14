@@ -642,7 +642,7 @@ html {
 }
 
 body {
-  padding-top: 74px;
+  padding-top: 84px;
 }
 
 h1,
@@ -747,7 +747,7 @@ header.header {
   left: 0;
   right: 0;
   z-index: 5;
-  height: 71px;
+  height: 81px;
 }
 
 header.header div.header__bar.row {
@@ -776,7 +776,7 @@ header.header div.header__bar.row div.grid-6 {
 header.header div.header__bar.row div.grid-6 a.post {
   width: 145px;
   display: inline-left;
-  margin-left: 10px;
+  margin: 5px 0 0 10px;
 }
 
 header.header .user_nav {
@@ -786,7 +786,7 @@ header.header .user_nav {
 }
 
 header.header .user_nav span {
-  top: 5px;
+  top: 13px;
   display: block;
   float: left;
   margin-left: 10px;
