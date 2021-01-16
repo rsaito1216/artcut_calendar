@@ -20,13 +20,16 @@
         </div>
         <%= form.text_field :title, class:"items-text", id:"item-name", placeholder:"名字(カタカナ)、またはニックネーム(１０文字まで)", maxlength:"10" %>
         <div class="items-explain">
-          <div class="weight-bold-text">
-            説明
-            <span class="indispensable">空欄OK</span> 「髭剃りのみ希望(←この場合３０分)」、「白髪染めを希望(←この場合９０分)」、など通常のカットコース以外を希望する場合は記載してください。
-          </div>
-          <%= form.text_area :description, class:"items-text", id:"item-info", placeholder:"(30文字まで)" ,rows:"2" ,maxlength:"30" %>
+        <div class="weight-bold-text">
+          説明
+          <span class="indispensable">空欄OK</span> 店長に伝えたい事がある時は記載してください。<br>(記載した文は他の人は見られません)
         </div>
-    
+          <%= form.text_area :description, class:"items-text", id:"item-info", placeholder:"(30文字まで)" ,rows:"2" ,maxlength:"30" %>
+        <div class="weight-bold-text">
+           コース一覧
+          <span class="indispensable">選択しなくてもOK</span> 予約時間の参考に表示しています。
+        </div>
+          <%= form.collection_select(:course_id, Course.all, :id, :name, {}, {class:"course-select-box", id:"event-course"}) %>
       <div class="event-detail">
         <div class="weight-bold-text-title">予約日時</div>
           <div class="form">
@@ -40,7 +43,6 @@
             <div class="weight-bold-text-list">
               終了時間
               <span class="indispensable">必須</span> 閉店時間ＰＭ７：００
-              <p>通常のカットコース予約なら開始時間から６０分後(１時間後)に設定してください)</p>
             </div>
             <div class="end-time">
               <%= form.datetime_select :end_date , {:discard_year => true,:discard_month => true,:discard_day => true,datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>', start_hour: 9, end_hour: 19, ampm: true,minute_step: 15}, class:"select-box" %>

@@ -1,6 +1,9 @@
 class Event < ApplicationRecord
   belongs_to :user
 
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :course
+
   validates :title, :start_date, :end_date, presence: true
 
   validate :start_end_check
