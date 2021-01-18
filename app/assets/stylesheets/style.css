@@ -1095,8 +1095,8 @@ footer p {
 }
 
 .weight-bold-text-title{
-  border-top: 3px solid #3cb3e4;
-  border-bottom: 3px solid #3cb3e4;
+  border-top: 3px solid #acc6d1;
+  border-bottom: 3px solid #acc6d1;
   padding: 5px 20px;
   width: 200px;
   text-align: center;
@@ -1108,8 +1108,8 @@ footer p {
 
 .weight-bold-text-title:before {
   content: "";
-  border-left: 3px solid #3cb3e4;
-  border-right: 3px solid #3cb3e4;
+  border-left: 3px solid #acc6d1;
+  border-right: 3px solid #acc6d1;
   display: block;
   position: absolute;
   width: calc(100% - 20px);
