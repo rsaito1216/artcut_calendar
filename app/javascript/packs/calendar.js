@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     locale:'ja',
     timeZone: 'Asia/Tokyo',
     allDaySlot: false,
-    contentHeight: 500,
+    contentHeight: 505,
     slotMinTime: "08:00:00",
     slotMaxTime: "20:00:00",
     businessHours: {

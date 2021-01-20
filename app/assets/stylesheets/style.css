@@ -1172,19 +1172,45 @@ footer p {
 .description-title {
   font-size: 30px;
   font-weight: bold;
-  color: goldenrod;
-  margin: 20px 0;
+  margin: 20px 0 20px 30px;
   padding-left: 30px;
-  background: #cde4ff;
-  border-top: solid 5px #536279;
-  border-bottom: solid 5px #61718a;
+  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  color: #494949;/*文字色*/
+  background: #f1eded;/*背景色*/
+  border-left: solid 6px #7db4e6;/*左線*/
+  border-bottom: solid 4px #d7d7d7;/*下線*/
+  width: 560px;
+}
+
+.modal-title {
+  margin: 20px 0 20px 20px;
+  width: 630px;
+  display: flex;
+  position: relative;
+  background: #dfefff;
+  box-shadow: 0px 0px 0px 5px #dfefff;
+  border: dashed 2px white;
+  padding: 0.2em 1.0em;
+  color: #454545;
+  align-items: center;
+}
+
+.modal-title:after {
+  position: absolute;
+  content: '';
+  left: -7px;
+  top: -7px;
+  border-width: 0 0 15px 15px;
+  border-style: solid;
+  border-color: #fff #fff #a8d4ff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
 .list-description {
   font-size: 18px;
   margin: 13px 0px;
   padding-left: 20px;
-  color: #000;
+  color: rgb(60, 161, 201);
   line-height: normal; 
 }
 
@@ -1212,4 +1238,69 @@ footer p {
   background-color: #f5f5f5;
   padding-left: 20px;
   margin-bottom: 15px;
+}
+
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.modal__bg{
+  background: rgba(22, 21, 21, 0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+.modal__content{
+  background: whitesmoke;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 660px;
+  height: 75%;
+  overflow-y: scroll;
+  z-index:9999;
+}
+
+.js-modal-open{
+  border: 2px solid #006DD9;
+  margin: 15px 0 15px 15px;
+  padding: 6px;
+  font-weight: bold;
+}
+
+.scroll-btn {
+  display:  inline-block;
+  text-align: center;
+  padding: 24px 0 0 0;
+  font-size: medium;
+  color: #fff;
+  text-decoration:  none;
+  background-color: #5891be;
+  border-radius: 5px;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  cursor:pointer;
+  bottom: 50px;
+  right: 30px;
+}
+
+.scroll-btn::before {
+  content:'';
+  width: 18px;
+  height: 18px;
+  display:  block;
+  border-bottom: solid 2px;
+  border-left: solid 2px;
+  transform: rotate(135deg);
+  position:  absolute;
+  top:  9px;
+  left:  0;
+  right:  0;
+  margin:  auto;
 }

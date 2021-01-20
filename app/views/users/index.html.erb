@@ -1,21 +1,62 @@
-<h1 class="description-title">ユーザー登録の手順</h1>
+<div class="modal-title">
+<h1 class="sell-title">目次：</h1>
+<a class="js-modal-open" href="" data-target="modal01">1.ユーザー登録手順 を表示</a>
+<a class="js-modal-open" href="" data-target="modal02">2.予約の登録手順 を表示</a>
+</div>
+
+<h1 class="description-title">１．ユーザー登録の手順</h1>        
+
+<div id="modal01" class="modal js-modal">
+  <div class="modal__bg js-modal-close"></div>
+  <div class="modal__content">
+    <p>説明ウィンドウを閉じる場合は下の「閉じる」をクリックするか、<br>背景の黒い部分をクリックしても閉じることができます。</p>
+    <p class='list-description'>① 画面右上の「ユーザー登録」を押し、必要項目を入力して「登録する」を押してください。</p>
+    <p class='list-description'>注）ニックネームは本名でも可能ですが予約カレンダー上に公開されてしまいます</p>
+    <p class='list-description'>注）パスワードはご自身で覚えやすいものにしてください。<br>（もし忘れてしまってもログイン画面から再設定できます）</p>
+    <p class='list-description'>注）メールアドレスが必要なのでアドレスが無い方はヤフーのフリーアドレスなどを開設してください。<br>（詳しい方に頼んで作るか、作りたくない方は店主に問合せください）</p>
+    <p class='list-description'>② 登録するとメールが送信されます。<br>登録した時と同じスマホ・パソコンでメール開き、<br>リンクをクリックして認証を行ってください。</p>
+    <%= image_tag'2020-11-18 14.59.00', :size =>'400x400', :hspace => '50px' %><br>
+    <p class='list-description'>メールのリンクをクリックすると新しい画面が表示され、<br>下記の表示が出ていれば登録成功です。</p>
+    <%= image_tag '2020-11-18 15.16.31', :size =>'400x400', :hspace => '50px'%>
+    </p>
+    <a class="js-modal-close" href="">閉じる</a>
+  </div>
+</div>
+
 <p class='list-description'>① 画面右上の「ユーザー登録」を押し、必要項目を入力して「登録する」を押してください。</p>
-<p class='list-description'>注）ニックネームは本名でも可能ですが本名が予約カレンダーに公開されてしまいます</p>
+<p class='list-description'>注）ニックネームは本名でも可能ですが予約カレンダー上に公開されてしまいます</p>
 <p class='list-description'>注）パスワードはご自身で覚えやすいものにしてください。<br>（もし忘れてしまってもログイン画面から再設定できます）</p>
 <p class='list-description'>注）メールアドレスが必要なのでアドレスが無い方はヤフーのフリーアドレスなどを<br>開設してください。（詳しい方に頼んで作るか、作りたくない方は店主に問合せください）</p>
-
 <p class='list-description'>② 登録するとメールが送信されます。登録した時と同じスマホ・パソコンでメール開き、<br>リンクをクリックして認証を行ってください。</p>
-
-  <%= image_tag'2020-11-18 14.59.00', :size =>'400x400', :hspace => '50px' %><br>
+<%= image_tag'2020-11-18 14.59.00', :size =>'400x400', :hspace => '50px' %><br>
 <p class='list-description'>メールのリンクをクリックすると新しい画面が表示され、下記の表示が出ていれば登録成功です。</p>
 <%= image_tag '2020-11-18 15.16.31', :size =>'400x400', :hspace => '50px'%>
 </p>
 
-<h1 class="description-title">ログイン後、予約の登録手順</h1>
+<h1 class="description-title">２．ログイン後、予約の登録手順</h1>        
+
+<div id="modal02" class="modal js-modal">
+  <div class="modal__bg js-modal-close"></div>
+  <div class="modal__content">
+    <p>説明ウィンドウを閉じる場合は下の「閉じる」をクリックするか、<br>背景の黒い部分をクリックしても閉じることができます。</p>
+    <p class='list-description'>① まずカレンダーを見て、空いている時間を探します。</p>
+    <p class='list-description'>画面右側の < > のボタンを押すと週が変わります。<br>todayボタンを押すとカレンダーが本日に戻ります<br>(カレンダーでは本日は橙色で表示)</p>
+    <p class='list-description'>空いている時間を確認したら画面の右上の「予約新規登録」をクリックしてください。</p>
+    <p class='list-description'>(パーマなど何時間かかるか分からない場合は電話にて問合せください)</p>
+    <%= image_tag '2020-11-18 14.57.37', :size =>'510x700', :hspace => '50px'%>
+    <p class='list-description'>② 予約が登録されると予約完了のメールが送られます。<br>予約が登録されたらカレンダーを確認してください。</p>
+    <p class='list-description'>下記画面のように登録した予約の枠が表示されます。<br>この枠をクリックすると予約の詳細が見れます。</p>
+    <p class='list-description'>この詳細は予約登録者と管理者(店主)のみが見ることができます。この詳細から予約の変更、取り消しも行えます。</p>
+    <%= image_tag '2020-11-18 15.51.41', :size =>'350x400', :hspace => '50px'%>
+    </p>
+    <a class="js-modal-close" href="">閉じる</a>
+  </div>
+</div>
+
 <p class='list-description'>① まずカレンダーを見て、空いている時間を探します。</p>
 <p class='list-description'>画面右側の < > のボタンを押すと週が変わります。<br>todayボタンを押すとカレンダーが本日に戻ります(カレンダーでは本日は橙色で表示)</p>
 <p class='list-description'>空いている時間を確認したら画面の右上の「予約新規登録」をクリックしてください。</p>
-<p class='list-description'>(白髪染めや髭剃りのみ、パーマなど何時間かかるか分からない場合は電話にて問合せください)</p>
+<p class='list-description'>(パーマなど何時間かかるか分からない場合は電話にて問合せください)</p>
 <%= image_tag '2020-11-18 14.57.37', :size =>'550x700', :hspace => '50px'%>
 <p class='list-description'>② 予約が登録されると予約完了のメールが送られます。<br>予約が登録されたらカレンダーを確認してください。</p>
 <p class='list-description'>下記画面のように登録した予約の枠が表示されます。<br>この枠をクリックすると予約の詳細が見れます。</p>
@@ -23,3 +64,22 @@
 <%= image_tag '2020-11-18 15.51.41', :size =>'350x400', :hspace => '50px'%>
 
 <%= link_to 'トップページに戻る', events_path ,class: "sell-title" %>
+
+<a href="#" class="scroll-btn">TOP</a>
+
+<script>
+$(function(){
+    $('.js-modal-open').each(function(){
+        $(this).on('click',function(){
+          var target = $(this).data('target');
+          var modal = document.getElementById(target);
+          $(modal).fadeIn();
+          return false;
+        });
+    });
+    $('.js-modal-close').on('click',function(){
+        $('.js-modal').fadeOut();
+        return false;
+    }); 
+});
+</script>
