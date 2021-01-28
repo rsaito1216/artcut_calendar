@@ -7,9 +7,13 @@
 <h1 class="description-title">１．ユーザー登録の手順</h1>        
 
 <div id="modal01" class="modal js-modal">
+
   <div class="modal__bg js-modal-close"></div>
+  
   <div class="modal__content">
     <p>説明ウィンドウを閉じる場合は下の「閉じる」をクリックするか、<br>背景の黒い部分をクリックしても閉じることができます。</p>
+    <h1 class="description-title">１．ユーザー登録の手順</h1>        
+
     <p class='list-description'>① 画面右上の「ユーザー登録」を押し、必要項目を入力して「登録する」を押してください。</p>
     <p class='list-description'>注）ニックネームは本名でも可能ですが予約カレンダー上に公開されてしまいます</p>
     <p class='list-description'>注）パスワードはご自身で覚えやすいものにしてください。<br>（もし忘れてしまってもログイン画面から再設定できます）</p>
@@ -19,7 +23,9 @@
     <p class='list-description'>メールのリンクをクリックすると新しい画面が表示され、<br>下記の表示が出ていれば登録成功です。</p>
     <%= image_tag '2020-11-18 15.16.31', :size =>'400x400', :hspace => '50px'%>
     </p>
-    <a class="js-modal-close" href="">閉じる</a>
+    <div class="modal-close-area">
+      <a class="js-modal-close" href="">閉じる</a>
+    </div>
   </div>
 </div>
 
@@ -38,6 +44,7 @@
 <div id="modal02" class="modal js-modal">
   <div class="modal__bg js-modal-close"></div>
   <div class="modal__content">
+    <h1 class="description-title">２．ログイン後、予約の登録手順</h1>        
     <p>説明ウィンドウを閉じる場合は下の「閉じる」をクリックするか、<br>背景の黒い部分をクリックしても閉じることができます。</p>
     <p class='list-description'>① まずカレンダーを見て、空いている時間を探します。</p>
     <p class='list-description'>画面右側の < > のボタンを押すと週が変わります。<br>todayボタンを押すとカレンダーが本日に戻ります<br>(カレンダーでは本日は橙色で表示)</p>
@@ -49,7 +56,9 @@
     <p class='list-description'>この詳細は予約登録者と管理者(店主)のみが見ることができます。この詳細から予約の変更、取り消しも行えます。</p>
     <%= image_tag '2020-11-18 15.51.41', :size =>'350x400', :hspace => '50px'%>
     </p>
-    <a class="js-modal-close" href="">閉じる</a>
+    <div class="modal-close-area">
+      <a class="js-modal-close" href="">閉じる</a>
+    </div>
   </div>
 </div>
 

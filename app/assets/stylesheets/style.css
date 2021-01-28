@@ -655,7 +655,7 @@ body {
   line-height: 1.57;
   letter-spacing: 0.15em;
   font-size: 16px;
-  color: #666;
+  color:rgb(92, 58, 58);
   font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   margin: 0;
 }
@@ -1179,7 +1179,7 @@ footer p {
   background: #f1eded;/*背景色*/
   border-left: solid 6px #7db4e6;/*左線*/
   border-bottom: solid 4px #d7d7d7;/*下線*/
-  width: 700px;
+  width: 590px;
 }
 
 .modal-title {
@@ -1272,22 +1272,37 @@ footer p {
   padding: 6px;
   font-weight: bold;
 }
+.js-modal-close{
+  margin: 0 auto;
+}
+.modal-close-area {
+  margin: 30px auto 0;
+  width: 90px;
+  display: flex;
+  position: relative;
+  background: #d1dfec;
+  box-shadow: 0px 0px 0px 5px #dfefff;
+  border: solid 2px white;
+  padding: 0.2em 0.9em;
+  color: #454545;
+  align-items: center;
+}
 
 .scroll-btn {
   display:  inline-block;
   text-align: center;
-  padding: 24px 0 0 0;
+  padding: 29px 0 0 0;
   font-size: medium;
   color: #fff;
   text-decoration:  none;
   background-color: #5891be;
   border-radius: 5px;
   position: fixed;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   cursor:pointer;
-  bottom: 50px;
-  right: 30px;
+  bottom: 60px;
+  right: 50px;
 }
 
 .scroll-btn::before {
@@ -1299,7 +1314,7 @@ footer p {
   border-left: solid 2px;
   transform: rotate(135deg);
   position:  absolute;
-  top:  9px;
+  top:  14px;
   left:  0;
   right:  0;
   margin:  auto;
