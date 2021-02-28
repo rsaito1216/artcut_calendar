@@ -464,7 +464,7 @@ ul li {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 640px;
+  max-width: 710px;
   *zoom: 1;
 }
 
@@ -1319,4 +1319,9 @@ footer p {
   left:  0;
   right:  0;
   margin:  auto;
+}
+
+.event-show-list{
+  font-size: 18px;
+  margin: 10px 0;
 }

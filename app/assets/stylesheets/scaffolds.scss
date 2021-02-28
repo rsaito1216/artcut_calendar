@@ -36,9 +36,22 @@ th {
   padding-bottom: 5px;
 }
 
-td {
-  padding: 0 5px 7px;
+.description-th{
+  width: 150px;
 }
+
+.time-th{
+  width: 120px;
+}
+
+.colspan-th{
+  width: 190px;
+}
+
+td {
+  padding: 0 5px 15px;
+}
+
 
 div {
   &.field, &.actions {

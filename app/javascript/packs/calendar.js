@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
       daysOfWeek: [ 0, 2, 3, 4, 5, 6 ], 
       startTime: '9:00',
       endTime: '19:00',
+    },
+    buttonText: {
+      today: '本日',
     }
   });
   

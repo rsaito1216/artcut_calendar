@@ -1,24 +1,29 @@
 <p id="notice"><%= notice %></p>
 <div class="contents row">
-<p>
+<div class="event-show-list">
   <strong>名前:</strong>
   <%= @event.title %>
-</p>
+</div>
 
-<p>
+<div class="event-show-list">
   <strong>説明:</strong>
   <%= @event.description %>
-</p>
+</div>
 
-<p>
+<div class="event-show-list">
+  <strong>コース:</strong>
+  <%= @event.course.name %>
+</div>
+
+<div class="event-show-list">
   <strong>開始時間:</strong>
   <%=l @event.start_date, format: :short %>
-</p>
+</div>
 
-<p>
+<div class="event-show-list">
   <strong>終了時間:</strong>
   <%=l @event.end_date, format: :short %>
-</p>
+</div>
 
 <% if user_signed_in? && current_user.id == @event.user_id %>
   <%= link_to '予約変更', edit_event_path(@event) %> |
