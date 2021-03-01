@@ -28,6 +28,14 @@
         const dayValue = startDayForm.value;
         endDayForm.value = dayValue
       })
+
+      document.addEventListener('change', (event) => {
+        var endHourForm = document.getElementById('event_end_date_4i').value;
+        const endMinuteForm = document.getElementById('event_end_date_5i');
+        if(endHourForm === "19"){
+          endMinuteForm.value = "00";
+        }
+      })
     })
   //  }
 //  });

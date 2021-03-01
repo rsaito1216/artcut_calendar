@@ -21,8 +21,8 @@
             <td><%=l event.start_date , format: :short%></td>
             <td><%=l event.end_date , format: :short%></td>
             <% if user_signed_in? && current_user.id == event.user_id %>
-              <td><%= link_to '予約変更', edit_event_path(event) %></td>
-              <td><%= link_to '予約取り消し', event_path(event), method: :delete, data: { confirm: '予約を取り消すと元に戻せません。本当に取り消しますか？' } %></td>
+              <td><%= link_to '予約変更', edit_event_path(event.id) %></td>
+              <td><%= link_to '予約取り消し', event_path(event.id), method: :delete, data: { confirm: '予約を取り消すと元に戻せません。本当に取り消しますか？' } %></td>
             <% end %>
           </tr>
         <% end %>
