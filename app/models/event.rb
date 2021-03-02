@@ -13,6 +13,8 @@ class Event < ApplicationRecord
 
   validates :start_date, event: true
   validates :end_date,   event: true
+
+  default_scope -> { order(start_date: :desc) }
   
   def start_end_check
     errors.add(:end_date, "は開始時刻より遅い時刻を選択してください") if self.start_date >= self.end_date

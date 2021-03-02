@@ -38,13 +38,20 @@ th {
 
 .title-th{
   width: 115px;
+  font-weight: bold;
 }
 .description-th{
-  width: 120px;
+  max-width: 125px;
+  font-weight: bold;
+}
+
+.description-td{
+  max-width: 125px;
 }
 
 .time-th{
   width: 150px;
+  font-weight: bold;
 }
 
 .colspan-th{

@@ -17,7 +17,7 @@
         <% @events.each do |event| %>
           <tr>
             <td><%= event.title %></td>
-            <td><%= event.description %></td>
+            <td class="description-td"><%= event.description %></td>
             <td><%=l event.start_date , format: :short %></td>
             <td><%=l event.end_date , format: :short %></td>
             <% if user_signed_in? && current_user.id == event.user_id %>
