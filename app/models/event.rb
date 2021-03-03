@@ -8,7 +8,7 @@ class Event < ApplicationRecord
 
   validate :start_end_check
   validate :start_check
-
+  validate :start_limit_check
   validate :date_is_not_monday
 
   validates :start_date, event: true
@@ -22,6 +22,10 @@ class Event < ApplicationRecord
 
   def start_check
     errors.add(:start_date, "は現在の日時より遅い時間を選択してください") if self.start_date < Time.zone.now
+  end
+
+  def start_limit_check
+    errors.add(:start_date, "は本日から2週間以内の日付を選択してください") if self.start_date >= Time.zone.now.since(15.days)
   end
 
   def date_is_not_monday
