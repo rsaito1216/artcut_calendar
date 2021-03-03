@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
   has_many :events, dependent: :destroy
 
-  validates :nickname, presence: true
+  validates :nickname, presence: true, uniqueness: true
   validates :email, format: { with: /[@]/, message: "に@が入力されていません"}
 end
