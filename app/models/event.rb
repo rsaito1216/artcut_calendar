@@ -6,6 +6,10 @@ class Event < ApplicationRecord
 
   validates :title, :start_date, :end_date, presence: true
 
+  with_options numericality: { other_than: 0 , message: "を選択入力してください"} do
+    validates :course_id
+  end
+
   validate :start_end_check
   validate :start_check
   validate :start_limit_check

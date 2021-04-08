@@ -27,7 +27,7 @@
           <%= form.text_area :description, class:"items-text", id:"item-info", placeholder:"(40文字まで)" ,rows:"2" ,maxlength:"40" %>
         <div class="weight-bold-text">
            コース一覧
-          <span class="indispensable">選択しなくてもOK</span> 予約時間の参考に表示しています。
+          <span class="indispensable">必須</span> 予約時間の参考に表示しています。
         </div>
           <%= form.collection_select(:course_id, Course.all, :id, :name, {}, {class:"course-select-box", id:"event-course"}) %>
       <div class="event-detail">

@@ -7,6 +7,7 @@ ja:
        title: 名前
        start_date: 開始日時
        end_date: 終了時間
+       course_id: コース
 
  time:
    formats:
